@@ -1,0 +1,15 @@
+import 'package:flutter/material.dart';
+Color primaryColor = Colors.green.shade500;
+Color secondaryColor = Colors.green;
+Color defaultAppColor = Colors.green.shade500;
+Color defaultAppColor2 = Colors.green.shade200;
+const Color defaultAppWhiteColor = Color(0xffffffff);
+const Color defaultBlack = Color(0xFF000000);
+const Color defaultLightBlack = Color(0xFF181818);
+const Color defaultGray = Color(0xFF807F7F);
+const Color defaultAppColor3 = Color(0xFF313943);
+Color defaultAppColor4 = const Color(0xFF4a707a);
+const Color defaultLightTealColor = Color(0xff4fbe9e);
+const Color defaultFacebookColor = Color(0xff4267B2);
+const Color defaultTwitterColor = Color(0xff00acee);
+Color defaultLightWhite = defaultAppWhiteColor.withOpacity(0.1);

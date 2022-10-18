@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:portfolio/app_localization/cubit/locale_cubit.dart';
 import 'package:portfolio/widgets/custom_button.dart';
 import 'package:portfolio/widgets/custom_text_button.dart';
 
@@ -34,11 +36,36 @@ class CustomAppBar extends StatelessWidget {
                   const SizedBox(
                     width: 16.0,
                   ),
-                  CustomButton(
-                    text: 'Get Started',
-                    onPressed: () {},
-                    height: 40.0,
-                    width: 150.0,
+                  Row(
+                    children: [
+                      CustomButton(
+                        text: 'Get Started',
+                        onPressed: () {},
+                        height: 40.0,
+                        width: 150.0,
+                      ),
+                      const SizedBox(width: 5.0,),
+                      BlocConsumer<LocaleCubit, LocalStates>(
+                        listener: (context, state) {
+                          // TODO: implement listener
+                        },
+                        builder: (context, state) {
+                          var cubit = LocaleCubit.get(context);
+                          return CustomButton(
+                            text: cubit.locale!.languageCode == 'en' ? 'AR' : 'EN',
+                            onPressed: () {
+                              if(cubit.locale!.languageCode == 'en'){
+                                cubit.changeLanguage('ar');
+                              }else{
+                                cubit.changeLanguage('en');
+                              }
+                            },
+                            height: 40.0,
+                            width: 40.0,
+                          );
+                        },
+                      ),
+                    ],
                   )
                 ],
               )
