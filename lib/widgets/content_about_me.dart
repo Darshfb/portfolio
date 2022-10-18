@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio/screens/custom_button.dart';
-import 'package:portfolio/screens/icon_contact.dart';
 import 'package:portfolio/screens/my_cv.dart';
+import 'package:portfolio/widgets/custom_button.dart';
+import 'package:portfolio/widgets/icon_contact.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -119,11 +119,9 @@ class ContentAboutMe extends StatelessWidget {
               width: 150.0,
               text: 'Hire Me',
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => MyCv()));
-                //
-                // final Uri url = Uri.parse(
-                //     'https://wa.me/+201006476494');
-                // launchUrl(url);
+                final Uri url = Uri.parse(
+                    'https://wa.me/+201006476494');
+                launchUrl(url);
               },
               backgroundColor: Colors.deepOrange,
             ),

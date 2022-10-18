@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/responsive.dart';
 import 'package:portfolio/screens/home_screen.dart';
+import 'package:portfolio/screens/home_screen_tab.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,10 @@ class MyApp extends StatelessWidget {
         backgroundColor: const Color(0xFF0E0C38),
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const Responsive(
+          mobile: HomeScreenTab(),
+          tablet: HomeScreenTab(),
+          web: HomeScreen()),
     );
   }
 }

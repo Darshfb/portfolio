@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/custom_button.dart';
-import 'package:portfolio/screens/custom_text_button.dart';
+import 'package:portfolio/widgets/custom_button.dart';
+import 'package:portfolio/widgets/custom_text_button.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);
