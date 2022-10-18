@@ -19,7 +19,7 @@ class AboutScreen extends StatelessWidget {
           child: Column(
             //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              Column(
                 children: [
                   const Image(
                     image: AssetImage(
@@ -29,7 +29,7 @@ class AboutScreen extends StatelessWidget {
                     filterQuality: FilterQuality.high,
                     fit: BoxFit.fitHeight,
                   ),
-                  const SizedBox(width: 10.0,),
+                  const SizedBox(width: 5.0,),
                   Expanded(
                     child: Card(
                       color: Colors.teal.shade300,
@@ -59,7 +59,7 @@ class AboutScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20.0,),
-              ContentAboutMe(),
+              const ContentAboutMe(),
               const SizedBox(height: 30.0,),
             ],
           ),
