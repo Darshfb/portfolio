@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio/app_localization/app_localization.dart';
 import 'package:portfolio/app_localization/cubit/locale_cubit.dart';
+import 'package:portfolio/cubit/app_cubit.dart';
 import 'package:portfolio/responsive.dart';
 import 'package:portfolio/screens/home_screen.dart';
 import 'package:portfolio/screens/home_screen_tab.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => LocaleCubit()..getSaveLanguage()),
+        BlocProvider(create: (context) => AppCubit()),
       ],
       child: BlocConsumer<LocaleCubit, LocalStates>(
         listener: (context, state) {},

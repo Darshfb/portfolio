@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:portfolio/app_localization/cubit/locale_cubit.dart';
+import 'package:portfolio/cubit/app_cubit.dart';
 import 'package:portfolio/widgets/custom_button.dart';
 import 'package:portfolio/widgets/custom_text_button.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+  CustomAppBar({Key? key}) : super(key: key);
+  final List<String> title = ['About', 'Portfolio', 'Contact'];
 
   @override
   Widget build(BuildContext context) {
@@ -23,51 +25,81 @@ class CustomAppBar extends StatelessWidget {
           child: Row(
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Image(image: AssetImage('assets/images/logo.png')),
+              const Text(
+                'My Protfolio',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                    fontSize: 30.0),
+              ),
               const Spacer(
                 flex: 2,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CustomAppBarButton(title: 'About', onTap: () {}),
-                  CustomAppBarButton(title: 'Portfolio', onTap: () {}),
-                  CustomAppBarButton(title: 'Contact', onTap: () {}),
-                  const SizedBox(
-                    width: 16.0,
-                  ),
-                  Row(
+              BlocConsumer<AppCubit, AppState>(
+                listener: (BuildContext context, state) {},
+                builder: (BuildContext context, Object? state) {
+                  var cubit = AppCubit.get(context);
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      CustomButton(
-                        text: 'Get Started',
-                        onPressed: () {},
-                        height: 40.0,
-                        width: 150.0,
+                      SizedBox(
+                        width: 190,
+                        child: ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          scrollDirection: Axis.horizontal,
+                          itemCount: title.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return CustomAppBarButton(
+                                title: title[index],
+                                onTap: () {
+                                  cubit.changeAppBar(index: index);
+                                });
+                          },
+                        ),
                       ),
-                      const SizedBox(width: 5.0,),
-                      BlocConsumer<LocaleCubit, LocalStates>(
-                        listener: (context, state) {
-                          // TODO: implement listener
-                        },
-                        builder: (context, state) {
-                          var cubit = LocaleCubit.get(context);
-                          return CustomButton(
-                            text: cubit.locale!.languageCode == 'en' ? 'AR' : 'EN',
-                            onPressed: () {
-                              if(cubit.locale!.languageCode == 'en'){
-                                cubit.changeLanguage('ar');
-                              }else{
-                                cubit.changeLanguage('en');
-                              }
-                            },
+                      // CustomAppBarButton(title: 'About', onTap: () {}),
+                      // CustomAppBarButton(title: 'Portfolio', onTap: () {}),
+                      // CustomAppBarButton(title: 'Contact', onTap: () {}),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      Row(
+                        children: [
+                          CustomButton(
+                            text: 'Get Started',
+                            onPressed: () {},
                             height: 40.0,
-                            width: 40.0,
-                          );
-                        },
-                      ),
+                            width: 150.0,
+                          ),
+                          const SizedBox(
+                            width: 5.0,
+                          ),
+                          BlocConsumer<LocaleCubit, LocalStates>(
+                            listener: (context, state) {},
+                            builder: (context, state) {
+                              var cubit = LocaleCubit.get(context);
+                              return CustomButton(
+                                text: cubit.locale!.languageCode == 'en'
+                                    ? 'AR'
+                                    : 'EN',
+                                onPressed: () {
+                                  if (cubit.locale!.languageCode == 'en') {
+                                    cubit.changeLanguage('ar');
+                                  } else {
+                                    cubit.changeLanguage('en');
+                                  }
+                                },
+                                height: 40.0,
+                                width: 40.0,
+                              );
+                            },
+                          ),
+                        ],
+                      )
                     ],
-                  )
-                ],
+                  );
+                },
               )
             ],
           ),

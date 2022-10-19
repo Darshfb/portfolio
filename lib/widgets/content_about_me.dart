@@ -4,11 +4,10 @@ import 'package:portfolio/screens/my_cv.dart';
 import 'package:portfolio/widgets/custom_button.dart';
 import 'package:portfolio/widgets/icon_contact.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-
+import 'package:velocity_x/velocity_x.dart';
 
 class ContentAboutMe extends StatelessWidget {
-   const ContentAboutMe({Key? key}) : super(key: key);
+  const ContentAboutMe({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,36 +17,38 @@ class ContentAboutMe extends StatelessWidget {
       children: [
         const Text(
           'This is',
-          style: TextStyle(color: Colors.white, fontSize: 20.0, height: 1),
+          style: TextStyle(color: Colors.white, fontSize: 20.0, height: 1,fontWeight: FontWeight.bold),
         ),
-        const Text(
-          'Mostafa \nMahmoud',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 75.0,
-            fontWeight: FontWeight.w900,
-            height: 1,
-          ),
-        ),
+        const SizedBox(height: 10.0,),
         Row(
-          children: const [
-            Text(
-              'A flutter developer ',
-              style: TextStyle(
-                color: Colors.deepOrange,
-                fontSize: 20.0,
-              ),
-            ),
+          children: [
             Expanded(
-              child: Text(
-                'a with crazy programming passion',
+              child: const Text(
+                'Mostafa \nMahmoud',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
+                  fontSize: 75.0,
+                  fontWeight: FontWeight.w900,
+                  height: 1.3,
+                  fontFamily: 'Pacifico'
                 ),
-              ),
+              ).shimmer(),
             ),
           ],
+        ),
+        const Text(
+          'A flutter developer ',
+          style: TextStyle(
+            color: Colors.deepOrange,
+            fontSize: 26.0,
+          ),
+        ).shimmer(primaryColor: Colors.deepOrange),
+        const SizedBox(height: 2.0,),
+        const Text(
+          'with crazy programming passion.',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 22.0,
+          ),
         ),
         const SizedBox(
           height: 32.0,
@@ -74,21 +75,23 @@ class ContentAboutMe extends StatelessWidget {
             IconContact(
               icon: FontAwesomeIcons.linkedin,
               onPressed: () {
-                final Uri url = Uri.parse('https://www.linkedin.com/in/mostafamahmoudaboads/');
+                final Uri url = Uri.parse(
+                    'https://www.linkedin.com/in/mostafamahmoudaboads/');
                 launchUrl(url);
               },
-            ), IconContact(
+            ),
+            IconContact(
               icon: FontAwesomeIcons.whatsapp,
               onPressed: () {
-                final Uri url = Uri.parse(
-                    'https://wa.me/+201006476494');
+                final Uri url = Uri.parse('https://wa.me/+201006476494');
                 launchUrl(url);
               },
             ),
             IconContact(
               icon: FontAwesomeIcons.facebook,
               onPressed: () {
-                final Uri url = Uri.parse('https://www.facebook.com/Mr.mostafamahmod/');
+                final Uri url =
+                    Uri.parse('https://www.facebook.com/Mr.mostafamahmod/');
                 launchUrl(url);
               },
             ),
@@ -102,11 +105,11 @@ class ContentAboutMe extends StatelessWidget {
             IconContact(
               icon: FontAwesomeIcons.instagram,
               onPressed: () {
-                final Uri url = Uri.parse('https://www.instagram.com/mostafamahmoudinsta/');
+                final Uri url =
+                    Uri.parse('https://www.instagram.com/mostafamahmoudinsta/');
                 launchUrl(url);
               },
             ),
-
           ],
         ),
         const SizedBox(
@@ -119,8 +122,7 @@ class ContentAboutMe extends StatelessWidget {
               width: 150.0,
               text: 'Hire Me',
               onPressed: () {
-                final Uri url = Uri.parse(
-                    'https://wa.me/+201006476494');
+                final Uri url = Uri.parse('https://wa.me/+201006476494');
                 launchUrl(url);
               },
               backgroundColor: Colors.deepOrange,
@@ -134,7 +136,10 @@ class ContentAboutMe extends StatelessWidget {
               text: 'CV',
               onPressed: () {
                 // PdfDocument.openAsset('assets/images/MostafaMahmoudcv.pdf');
-                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => MyCv()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => MyCv()));
                 // PDF(
                 //   enableSwipe: true,
                 //   swipeHorizontal: true,
@@ -156,7 +161,6 @@ class ContentAboutMe extends StatelessWidget {
                 //     }
                 //   },
                 // ).fromAsset('assets/images/MostafaMahmoudcv.pdf');
-
               },
             ),
           ],

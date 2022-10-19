@@ -12,7 +12,7 @@ class CustomAppBarButton extends StatelessWidget {
         onPressed: onTap,
         child: Text(
           title,
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ));
   }
 }
