@@ -28,6 +28,7 @@ class HomeScreenTab extends StatelessWidget {
             onTap: (index) {
               cubit.changeAppBar(index: index);
             },
+            selectedItemColor: Colors.red,
             currentIndex: cubit.currentIndex,
             elevation: 5,
             type: BottomNavigationBarType.fixed,

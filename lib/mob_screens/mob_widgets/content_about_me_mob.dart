@@ -114,50 +114,52 @@ class ContentAboutMeMob extends StatelessWidget {
         ),
         Row(
           children: [
-            CustomButton(
-              height: 50.0,
-              width: 150.0,
-              text: 'Hire Me',
-              onPressed: () {
-                final Uri url = Uri.parse(
-                    'https://wa.me/+201006476494');
-                launchUrl(url);
-              },
-              backgroundColor: Colors.deepOrange,
+            Expanded(
+              child: CustomButton(
+                height: 50.0,
+                text: 'Hire Me',
+                onPressed: () {
+                  final Uri url = Uri.parse(
+                      'https://wa.me/+201006476494');
+                  launchUrl(url);
+                },
+                backgroundColor: Colors.deepOrange,
+              ),
             ),
             const SizedBox(
-              width: 10.0,
+              width: 5.0,
             ),
-            CustomButton(
-              height: 50.0,
-              width: 150.0,
-              text: 'CV',
-              onPressed: () {
-                // PdfDocument.openAsset('assets/images/MostafaMahmoudcv.pdf');
-                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => MyCv()));
-                // PDF(
-                //   enableSwipe: true,
-                //   swipeHorizontal: true,
-                //   autoSpacing: false,
-                //   pageFling: false,
-                //   onError: (error) {
-                //     if (kDebugMode) {
-                //       print(error.toString());
-                //     }
-                //   },
-                //   onPageError: (page, error) {
-                //     if (kDebugMode) {
-                //       print('$page: ${error.toString()}');
-                //     }
-                //   },
-                //   onPageChanged: (int? page, int? total) {
-                //     if (kDebugMode) {
-                //       print('page change: $page/$total');
-                //     }
-                //   },
-                // ).fromAsset('assets/images/MostafaMahmoudcv.pdf');
+            Expanded(
+              child: CustomButton(
+                height: 50.0,
+                text: 'CV',
+                onPressed: () {
+                  // PdfDocument.openAsset('assets/images/MostafaMahmoudcv.pdf');
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => MyCv()));
+                  // PDF(
+                  //   enableSwipe: true,
+                  //   swipeHorizontal: true,
+                  //   autoSpacing: false,
+                  //   pageFling: false,
+                  //   onError: (error) {
+                  //     if (kDebugMode) {
+                  //       print(error.toString());
+                  //     }
+                  //   },
+                  //   onPageError: (page, error) {
+                  //     if (kDebugMode) {
+                  //       print('$page: ${error.toString()}');
+                  //     }
+                  //   },
+                  //   onPageChanged: (int? page, int? total) {
+                  //     if (kDebugMode) {
+                  //       print('page change: $page/$total');
+                  //     }
+                  //   },
+                  // ).fromAsset('assets/images/MostafaMahmoudcv.pdf');
 
-              },
+                },
+              ),
             ),
           ],
         )

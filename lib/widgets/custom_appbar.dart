@@ -51,6 +51,7 @@ class CustomAppBar extends StatelessWidget {
                           itemCount: title.length,
                           itemBuilder: (BuildContext context, int index) {
                             return CustomAppBarButton(
+                              color: cubit.currentIndex == index ? Colors.red : null,
                                 title: title[index],
                                 onTap: () {
                                   cubit.changeAppBar(index: index);

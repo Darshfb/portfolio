@@ -28,7 +28,7 @@ bool isZoomIn = false;
       },child: const Icon(Icons.zoom_in)),
       body: SizedBox(
         child: SfPdfViewer.network(
-          'https://download1081.mediafire.com/vena5f3wglgg/m4hu4qujesnxbrz/Mostafa+Mahmoud+cv.pdf',
+          'https://download948.mediafire.com/0g2rh1eoxzxg/m4hu4qujesnxbrz/Mostafa+Mahmoud+cv.pdf',
           canShowHyperlinkDialog: false,
           controller: _pdfViewerController,
 

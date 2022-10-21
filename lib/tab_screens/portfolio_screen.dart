@@ -26,7 +26,6 @@ class PortfolioScreenWeb extends StatelessWidget {
                       child: SizedBox(
                         height: 500,
                         child: CarouselSlider.builder(
-
                             unlimitedMode: true,
                             enableAutoSlider: true,
                             slideBuilder: (index) {
@@ -36,13 +35,6 @@ class PortfolioScreenWeb extends StatelessWidget {
                               );
                             },
                             slideTransform: const CubeTransform(),
-                            slideIndicator: CircularSlideIndicator(
-                              indicatorBorderWidth: 1,
-                              currentIndicatorColor: Colors.red,
-                              indicatorBorderColor: Colors.white,
-                              itemSpacing: 14,
-                              padding: const EdgeInsets.only(top: 40),
-                            ),
                             itemCount: cubit.sure.length),
                       ),
                     ),
@@ -79,6 +71,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(
                                           child: Text('Clean Architecture App',
@@ -89,6 +82,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('State Management', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Flutter Bloc --> Cubit', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -96,6 +90,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Api Calls', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Dio', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -103,6 +98,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Cache Data', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Shared Preferences', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -110,6 +106,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Toast', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Flutter Toast & Bot Toast', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -117,6 +114,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Image Cache', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Cached Network Image', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -124,6 +122,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Bottom Nav Bar', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Persistent Bottom Nav Bar', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -131,6 +130,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('FingerPrint Auth', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Local Auth', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -138,6 +138,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Secure Storage', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Flutter Secure Storage', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -145,6 +146,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Restart Phone', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Flutter Phoenix', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -152,6 +154,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Localization', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Flutter Lozalization', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -208,6 +211,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                               child: Column(
                                 children: [
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(
                                           child: Text('Clean Architecture App',
@@ -218,6 +222,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('State Management', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Flutter Bloc --> Cubit', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -225,6 +230,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Api Calls', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Dio', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -232,6 +238,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Cache Data', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Shared Preferences', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -239,6 +246,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Toast', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Flutter Toast', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -246,6 +254,7 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Image Cache', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Cached Network Image', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
@@ -253,12 +262,14 @@ class PortfolioScreenWeb extends StatelessWidget {
                                   ),
                                   const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(child: Text('Restart Phone', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                       Expanded(child: Text('Flutter Phoenix', style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),)),
                                     ],
                                   ), const Divider(),
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: const [
                                       Expanded(
                                           child: Text(
@@ -297,13 +308,6 @@ class PortfolioScreenWeb extends StatelessWidget {
                               );
                             },
                             slideTransform: const CubeTransform(),
-                            slideIndicator: CircularSlideIndicator(
-                              indicatorBorderWidth: 1,
-                              currentIndicatorColor: Colors.red,
-                              indicatorBorderColor: Colors.white,
-                              itemSpacing: 14,
-                              padding: const EdgeInsets.only(top: 40),
-                            ),
                             itemCount: cubit.sure.length),
                       ),
                     ),

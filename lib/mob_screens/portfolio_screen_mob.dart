@@ -48,13 +48,6 @@ class PortfolioScreenMob extends StatelessWidget {
                             );
                           },
                           slideTransform: const CubeTransform(),
-                          slideIndicator: CircularSlideIndicator(
-                            indicatorBorderWidth: 1,
-                            currentIndicatorColor: Colors.red,
-                            indicatorBorderColor: Colors.white,
-                            itemSpacing: 14,
-                            padding: const EdgeInsets.only(top: 40),
-                          ),
                           itemCount: cubit.sure.length),
                     ),
                     Column(
@@ -329,13 +322,6 @@ class PortfolioScreenMob extends StatelessWidget {
                             );
                           },
                           slideTransform: const CubeTransform(),
-                          slideIndicator: CircularSlideIndicator(
-                            indicatorBorderWidth: 1,
-                            currentIndicatorColor: Colors.red,
-                            indicatorBorderColor: Colors.white,
-                            itemSpacing: 14,
-                            padding: const EdgeInsets.only(top: 40),
-                          ),
                           itemCount: cubit.sure.length),
                     ),
                     const SizedBox(

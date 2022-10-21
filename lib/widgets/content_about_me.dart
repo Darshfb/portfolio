@@ -29,7 +29,6 @@ class ContentAboutMe extends StatelessWidget {
                   fontSize: 75.0,
                   fontWeight: FontWeight.w900,
                   height: 1.3,
-                  fontFamily: 'Pacifico'
                 ),
               ).shimmer(),
             ),
